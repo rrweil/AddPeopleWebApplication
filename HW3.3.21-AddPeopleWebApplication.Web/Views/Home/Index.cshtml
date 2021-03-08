@@ -1,0 +1,40 @@
+﻿@model IndexViewModel
+@using HW3._3._21_AddPeopleWebApplication.Data
+
+@if (!String.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="alert alert-dismissible fade show alert-success" role="alert">
+        <strong>@Model.SuccessMessage</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="row">
+
+            <div class="col-md-12">
+                <a href="/home/addPeople" class="btn btn-success">Add People</a>
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                    </tr>
+                    @foreach (Person person in Model.People)
+                    {
+                        <tr>
+                            <td>@person.FirstName</td>
+                            <td>@person.LastName</td>
+                            <td>@person.Age</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+    </main>
+</div>

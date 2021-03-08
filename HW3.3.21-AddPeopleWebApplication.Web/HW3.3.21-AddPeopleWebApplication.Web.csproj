@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>HW3._3._21_AddPeopleWebApplication.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HW3.3.21-AddPeopleWebApplication.Data\HW3.3.21-AddPeopleWebApplication.Data.csproj" />
+  </ItemGroup>
+
+</Project>
